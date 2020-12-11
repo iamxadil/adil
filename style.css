@@ -619,7 +619,7 @@ footer span {
   .left-div {
     margin-top: 50px;
     height: 800px;
-    background-position: -120px -1100px;
+    background-position: -100px -1100px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

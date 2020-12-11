@@ -63,7 +63,7 @@ a {
       rgba(0, 0, 0, 0.2) 0%,
       rgba(0, 0, 0, 0.2) 100%
     ),
-    url("/Images/122384661_687771228534423_3628686379787594260_n\ \(3\).jpg");
+    url("me.jpg");
   background-size: cover;
   background-position: center;
   box-shadow: 1px 1px 5px black;
@@ -237,7 +237,7 @@ a {
       rgba(0, 0, 0, 0) 0%,
       rgba(0, 0, 0, 0) 100%
     ),
-    url("/Images/ticpic.PNG");
+    url("ticpic.PNG");
   display: flex;
   justify-content: center;
   align-items: center;
@@ -268,7 +268,7 @@ a {
       rgba(0, 0, 0, 0) 0%,
       rgba(0, 0, 0, 0) 100%
     ),
-    url("/Images/rps.PNG");
+    url("rps.PNG");
   background-size: 600px 300px;
   background-position: center;
   border-radius: 6px;
@@ -289,7 +289,7 @@ a {
       rgba(0, 0, 0, 0) 0%,
       rgba(0, 0, 0, 0) 100%
     ),
-    url("/Images/website.PNG");
+    url("website.PNG");
   background-size: cover;
   background-position: center;
   border-radius: 6px;
@@ -301,7 +301,7 @@ a {
       rgba(0, 0, 0, 0.5) 0%,
       rgba(0, 0, 0, 0.5) 100%
     ),
-    url("/Images/ticpic.PNG");
+    url("ticpic.PNG");
 }
 
 .tic:hover > .ticH {
@@ -315,7 +315,7 @@ a {
       rgba(0, 0, 0, 0.5) 0%,
       rgba(0, 0, 0, 0.5) 100%
     ),
-    url("/Images/rps.PNG");
+    url("rps.PNG");
 }
 
 .rps:hover > .rpsH {
@@ -329,7 +329,7 @@ a {
       rgba(0, 0, 0, 0.5) 0%,
       rgba(0, 0, 0, 0.5) 100%
     ),
-    url("/Images/website.PNG");
+    url("website.PNG");
 }
 
 .webSite:hover > .webH {

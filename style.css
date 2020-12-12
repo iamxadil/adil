@@ -65,7 +65,8 @@ a {
     ),
     url("me.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+
   box-shadow: 1px 1px 5px black;
 }
 
@@ -206,7 +207,6 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  
 }
 
 .myProjects {
@@ -517,6 +517,8 @@ footer span {
   opacity: 0.5;
 }
 
+
+
 @media only screen and (max-width: 1520px) {
   .second-c {
     left: 90%;
@@ -540,11 +542,26 @@ footer span {
   .languages {
     width: 60%;
   }
+
+  
 }
 
 @media only screen and (max-width: 1024px) {
   svg {
     display: none;
+  }
+
+  .svgs {
+    width: 80%;
+    height: 100vh;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+  } 
+    
+  .next {
+    transform: translate(-50%, -50%);
   }
 
   .first-section {
@@ -575,6 +592,7 @@ footer span {
   .ham {
     font-size: 36px;
     cursor: pointer;
+    z-index: 4;
     display: block;
   }
 
@@ -595,12 +613,11 @@ footer span {
   }
 
   #second-section {
-
     height: 60vh;
   }
 
   #fourth-section {
-    margin-top: 16rem;
+    margin-top: 18rem;
   }
 
   .intro2 h1 {
@@ -619,11 +636,10 @@ footer span {
   .left-div {
     margin-top: 50px;
     height: 800px;
-    background-position: -100px -1100px;
+    background-position: -100px -100px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    
   }
 
   .myProjects {
@@ -656,16 +672,16 @@ footer span {
     font-weight: 400;
   }
 
-
-  #third-section{
-    padding-top: 20%;
+  #third-section {
+    padding-top: 32%;
+    
   }
-  #second-section{
+  #second-section {
     padding-top: 40%;
   }
 
   #fourth-section {
-    margin-top: 35rem;
+    margin-top: 20rem;
   }
 
   .intro2 h1 {
@@ -675,24 +691,87 @@ footer span {
   .email {
     display: none;
   }
+
+  svg {
+    display: block;
+  }
+
+  .first-l {
+    left: 77%;
+  }
+
+  .second-l {
+    left: 77%;
+  }
+
+  .third-l {
+    top: 28%;
+  }
+
+  .fourth-l {
+    top: 32%;
+  }
+
+  .first-c{
+    left: 6%;
+  }
+
+  .first-s {
+    top: 45%;
+    left: 3%;
+    z-index: -1;
+  }
+
+  .second-s {
+    left: 70%;
+    top: 35%;
+  }
+
+  .third-s {
+    left: 74%;
+    top: 17%;
+    
+  }
+
+  .second-c {
+    top: 58%;
+    left: 72%;
+    z-index: 2;
+
+  }
+
+  .svgs {
+    width: 100%;
+    overflow: hidden;
+    
+
+    
+  }
+  .intro2 h1 {
+    line-height: 50px;
+    
+    
+  }
+
+
+
+
 }
 
-
-@media only screen and (max-width: 650px){
-  
+@media only screen and (max-width: 650px) {
   #fourth-section {
-    margin-top: 55rem;
+    margin-top: 42rem;
   }
-  #third-section{
+  #third-section {
     padding-top: 50%;
   }
 
-  #second-section{
+  #second-section {
     margin-top: 8rem;
-   
   }
-  .left-div  {
+  .left-div {
     width: 300px;
+    background-position-x: center;
   }
 
   .languages {
@@ -712,24 +791,20 @@ footer span {
   .skill {
     font-size: 20px;
   }
-
 }
 
-
-@media only screen and (max-width: 450px){
-
+@media only screen and (max-width: 450px) {
   #fourth-section {
     margin-top: 65rem;
   }
-  #third-section{
+  #third-section {
     padding-top: 50%;
   }
 
-  #second-section{
+  #second-section {
     margin-top: 8rem;
-   
   }
-  .left-div  {
+  .left-div {
     width: 300px;
   }
 
@@ -754,23 +829,20 @@ footer span {
   #Contact {
     height: 12vh;
   }
-
-  
 }
 
 @media only screen and (max-width: 375px) {
   #fourth-section {
     margin-top: 68rem;
   }
-  #third-section{
+  #third-section {
     padding-top: 50%;
   }
 
-  #second-section{
+  #second-section {
     margin-top: 8rem;
-   
   }
-  .left-div  {
+  .left-div {
     width: 280px;
     height: 600px;
   }
@@ -788,7 +860,6 @@ footer span {
     height: 40px;
     width: 40px;
     padding: 4px 4px;
-
   }
   .projects div {
     height: 200px;

@@ -826,6 +826,55 @@ footer span {
     font-size: 20px;
   }
 
+  .first-l {
+    left: 75%;
+    top: 5%;
+  }
+
+  .second-l {
+    left: 76%;
+    top: 8%;
+  }
+
+  .third-l {
+    top: 22%;
+    left: 10%;
+  }
+
+  .fourth-l {
+    top: 26%;
+    left: 10%;
+  }
+
+  .first-c{
+    left: -5%;
+    top: 12%;
+  }
+
+  .first-s {
+    top: 44%;
+    left: -6%;
+    z-index: -1;
+  }
+
+  .second-s {
+    left: 75%;
+    top: 25%;
+  }
+
+  .third-s {
+    left: 74%;
+    top: 12%;
+    
+  }
+
+  .second-c {
+    top: 58%;
+    left: 77%;
+    z-index: -1;
+
+  }
+
   #Contact {
     height: 12vh;
   }
@@ -843,7 +892,7 @@ footer span {
     margin-top: 8rem;
   }
   .left-div {
-    width: 280px;
+    width: 245px;
     height: 600px;
   }
 
@@ -876,5 +925,49 @@ footer span {
 
   .ham {
     font-size: 18px;
+  }
+
+  .first-l {
+    top: 50;
+  }
+
+  .second-l {
+    left: 77%;
+  }
+
+  .third-l {
+    top: 18%;
+  }
+
+  .fourth-l {
+    top: 22%;
+  }
+
+  .first-c{
+    left: -4%;
+  }
+
+  .first-s {
+    top: 42%;
+    left: -6%;
+    z-index: -1;
+  }
+
+  .second-s {
+    left: 72%;
+    top: 27%;
+  }
+
+  .third-s {
+    left: 74%;
+    top: 12%;
+    
+  }
+
+  .second-c {
+    top: 58%;
+    left: 72%;
+    z-index: -1;
+
   }
 }

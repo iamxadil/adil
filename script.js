@@ -8,6 +8,8 @@ const sideBar = document.querySelector(".list");
 const aboutPage = document.querySelector(".about-page");
 const homePage = document.querySelector(".home-page");
 const skillsPage = document.querySelector(".skills-page");
+const projectsPage = document.querySelector(".projects-page");
+const projectNames = document.querySelectorAll(".project-name h1");
 const bars = {
   html: document.querySelector(".progress-html"),
   css: document.querySelector(".progress-css"),
@@ -15,22 +17,23 @@ const bars = {
   py: document.querySelector(".progress-py"),
   ui: document.querySelector(".progress-ui"),
 };
+
 //Variables
 
 let arr = [btn, btn2];
 let b = Array.from(btns);
-let all = [homePage, aboutPage, skillsPage];
+let all = [homePage, aboutPage, skillsPage, projectsPage];
 isRight = true;
 
 //Loops
 
-for (e in bars) {
-  bars[e].style.transition = "650ms ease-in-out";
+for (i in bars) {
+  bars[i].style.transition = "650ms ease-in-out";
 }
 
-all.map((e) => {
-  e.style.transition = "850ms ease-in-out";
-});
+for (x in all) {
+  all[x].style.transition = "850ms ease-in-out";
+}
 
 //Functions
 
@@ -41,7 +44,7 @@ function increment() {
   bars.py.style.width = "65%";
   bars.ui.style.width = "95%";
 }
-function dec() {
+function decrement() {
   bars.html.style.width = "0";
   bars.css.style.width = "0";
   bars.js.style.width = "0";
@@ -49,8 +52,21 @@ function dec() {
   bars.ui.style.width = "0";
 }
 
+function zero() {
+  projectNames.forEach((x) => {
+    x.style.opacity = "0";
+  });
+}
+
+function one() {
+  projectNames.forEach((x) => {
+    x.style.opacity = "1";
+  });
+}
+
 //Events
 
+//Menu Pop Up
 arr.forEach((button) => {
   button.addEventListener("click", () => {
     if (isRight) {
@@ -65,41 +81,48 @@ arr.forEach((button) => {
   });
 });
 
-//Loops
-
-//Events
-
+//Menu Buttons
 btns.forEach((e) => {
   e.addEventListener("click", () => {
     if (e == b[0]) {
-      dec();
+      decrement();
+      zero();
       box.style.backgroundImage = ``;
       aboutPage.style.display = "none";
       skillsPage.style.display = "none";
+      projectsPage.style.display = "none";
       homePage.style.display = "flex";
       setTimeout(() => {
         aboutPage.style.opacity = "0";
+        skillsPage.style.opacity = "0";
+        projectsPage.style.opacity = "0";
         homePage.style.opacity = "1";
       }, 1);
     } else if (e == b[1]) {
-      dec();
+      decrement();
+      zero();
       homePage.style.display = "none";
       skillsPage.style.display = "none";
+      projectsPage.style.display = "none";
       box.style.backgroundImage = `linear-gradient(to left, rgba(71, 71, 71, 0.6), rgba(0, 0, 0, 0.616)), url('./Images/saturn.jpg')`;
       aboutPage.style.display = "flex";
       setTimeout(() => {
         homePage.style.opacity = "0";
         skillsPage.style.opacity = "0";
+        projectsPage.style.opacity = "0";
         aboutPage.style.opacity = "1";
       }, 1);
     } else if (e == b[2]) {
+      zero();
       box.style.backgroundImage = ``;
       homePage.style.display = "none";
       aboutPage.style.display = "none";
       skillsPage.style.display = "flex";
+      projectsPage.style.display = "none";
       setTimeout(() => {
         homePage.style.opacity = "0";
         aboutPage.style.opacity = "0";
+        projectsPage.style.opacity = "0";
         skillsPage.style.opacity = "1";
       }, 1);
 
@@ -107,7 +130,21 @@ btns.forEach((e) => {
         increment();
       }, 650);
     } else if (e == b[3]) {
-      console.log("Projects");
+      decrement();
+      box.style.backgroundImage = ``;
+      homePage.style.display = "none";
+      aboutPage.style.display = "none";
+      skillsPage.style.display = "none";
+      projectsPage.style.display = "flex";
+      setTimeout(() => {
+        homePage.style.opacity = "0";
+        aboutPage.style.opacity = "0";
+        skillsPage.style.opacity = "0";
+        projectsPage.style.opacity = "1";
+      }, 1);
+      setTimeout(() => {
+        one();
+      }, 850);
     } else {
       console.log("Contacts");
     }

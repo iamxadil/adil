@@ -46,6 +46,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: "850ms ease-in-out";
+  transition: "850ms ease-in-out";
 }
 
 .about-page {
@@ -65,6 +67,8 @@ body {
   padding: 1rem;
   font-family: "Ubuntu", sans-serif;
   display: none;
+  -webkit-transition: "850ms ease-in-out";
+  transition: "850ms ease-in-out";
 }
 
 .about-page .first-sec {
@@ -75,9 +79,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   height: 35%;
 }
 
@@ -101,9 +104,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .skills-page {
@@ -120,6 +122,8 @@ body {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   display: none;
+  -webkit-transition: "850ms ease-in-out";
+  transition: "850ms ease-in-out";
 }
 
 .skills-page .a {
@@ -190,6 +194,117 @@ body {
   width: 0%;
 }
 
+.projects-page {
+  display: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 85%;
+  margin: auto;
+  height: 80%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.projects-page a {
+  text-decoration: none;
+  color: white;
+}
+
+.projects-page .boxy {
+  height: 200px;
+  width: 200px;
+  background: linear-gradient(-45deg, #5c0080, #5a00ad 100%);
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+  border-radius: 12px;
+  border: 2px #252525 solid;
+  cursor: pointer;
+  -webkit-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
+}
+
+.projects-page .boxy:hover {
+  background: none;
+  border: 2px purple solid;
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
+}
+
+.projects-page .project-name {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+}
+
+.projects-page .project-name h1 {
+  font-size: 18px;
+  font-weight: 300;
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+  opacity: 0;
+}
+
+.projects-page .languages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  font-size: 6px;
+  height: 10%;
+}
+
+.projects-page .languages h2 {
+  font-weight: 200;
+}
+
+.projects-page .web {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 90%;
+  height: 20%;
+}
+
+.projects-page i {
+  font-size: 22px;
+}
+
 .box {
   width: clamp(100px, 75vw, 800px);
   height: clamp(500px, 75vh, 600px);
@@ -199,6 +314,15 @@ body {
   z-index: 1;
   position: relative;
   background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .box .rectangle {
@@ -274,12 +398,12 @@ body {
 
 .box .info .about {
   line-height: 2.2rem;
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
 }
 
 .box .info .circle {
-  height: 200px;
-  width: 200px;
+  height: 180px;
+  width: 180px;
   border-radius: 50%;
   background: url("./Images/Adil.jpg") center center/cover;
   background-blend-mode: multiply;
@@ -370,7 +494,7 @@ body {
 
 .list li {
   font-size: 20px;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   cursor: pointer;
   padding: 10px 100% 10px 100%;
@@ -457,12 +581,12 @@ body {
   0% {
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
-    opacity: '1';
+    opacity: "1";
   }
   50% {
     -webkit-transform: translateX(-10px);
             transform: translateX(-10px);
-    opacity: '0';
+    opacity: "0";
   }
   100% {
     -webkit-transform: translateX(0px);
@@ -474,12 +598,12 @@ body {
   0% {
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
-    opacity: '1';
+    opacity: "1";
   }
   50% {
     -webkit-transform: translateX(-10px);
             transform: translateX(-10px);
-    opacity: '0';
+    opacity: "0";
   }
   100% {
     -webkit-transform: translateX(0px);
@@ -496,6 +620,49 @@ body {
 .rotate {
   -webkit-transform: rotate(180deg) !important;
           transform: rotate(180deg) !important;
+}
+
+@media only screen and (max-width: 950px) {
+  .projects-page {
+    height: 100%;
+    width: 80%;
+  }
+  .projects-page .boxy {
+    width: 160px !important;
+    height: 160px !important;
+  }
+}
+
+@media only screen and (max-width: 545px) {
+  .projects-page {
+    width: 100%;
+    height: 100%;
+  }
+  .projects-page .boxy {
+    width: 140px !important;
+    height: 140px !important;
+  }
+  .projects-page .project-name h1 {
+    font-size: 18px;
+    font-weight: 300;
+  }
+  .projects-page .languages h2 {
+    font-size: 6px;
+  }
+  .projects-page .web i {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  .projects-page {
+    width: 100%;
+    height: 100%;
+  }
+  .projects-page .boxy {
+    width: 120px !important;
+    height: 120px !important;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -568,11 +735,16 @@ body {
   .about p {
     font-size: 16px;
   }
-  .first-sec p, .second-sec p {
+  .first-sec p,
+  .second-sec p {
     font-size: 12px;
   }
   .skills-page h1 {
     font-size: 14px;
+  }
+  .boxy {
+    width: 150px !important;
+    height: 150px !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

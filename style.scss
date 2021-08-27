@@ -1,434 +1,526 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 
 $p: rgb(92, 1, 153);
-$p2: rgb(145,0,255);
-$w : rgb(255, 255, 255);
-$b: rgb(0,0,0);
-$b2: rgb(74,74,74);
-$bg-color: hsl(256,33,10);
-$dot-color: hsl(256,33,70);
+$p2: rgb(145, 0, 255);
+$w: rgb(255, 255, 255);
+$b: rgb(0, 0, 0);
+$b2: rgb(74, 74, 74);
+$bg-color: hsl(256, 33, 10);
+$dot-color: hsl(256, 33, 70);
 $dot-size: 1px;
 $dot-space: 22px;
-$font: 'Ubuntu', sans-serif;
+$font: "Ubuntu", sans-serif;
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
-    background: linear-gradient(-45deg, $p, rgb(34, 0, 56) 100%);
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background: linear-gradient(-45deg, $p, rgb(34, 0, 56) 100%);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
 .big-container {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .home-page {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   
-    
- 
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: "850ms ease-in-out";
+
 }
 
 .about-page {
-    height: 100%;
-    width: 100%;
-    color: white;
+  height: 100%;
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 1rem;
+  font-family: $font;
+  display: none;
+  transition: "850ms ease-in-out";
+
+  .first-sec {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    padding: 1rem;
-    font-family: $font;
-    display: none;
-    
- 
+    justify-content: space-around;
+    height: 35%;
+  }
 
-    
-    .first-sec {
-       
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 35%;
-    }
+  h2 {
+    color: $p2;
+  }
 
+  p {
+    width: clamp(250px, 65vw, 450px);
+    line-height: 1.5rem;
+    font-size: 16px;
+    z-index: 2;
+  }
 
-     h2 {
-         color:$p2 ;
-        
-     }
-    
-    p {
-        width: clamp(250px, 65vw,450px);
-        line-height: 1.5rem;
-        font-size: 16px;
-        z-index: 2;
-    }
-
-    .second-sec {
-        height: 25%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    
+  .second-sec {
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
 }
 
 .skills-page {
-
-    height: 100%;
-    width: clamp(150px, 65vw, 600px);
+  height: 100%;
+  width: clamp(150px, 65vw, 600px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  display: none;
+  transition: "850ms ease-in-out";
+  .a {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    display: none;
-    
-    .a {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    img {
-        width: 40px;
-    }
-
-    .icon {
-        display: flex;
-        align-items: center;
-        padding: 25px;
-        
-    }
-
-    h1 {
-        font-family: $font;
-        color: $p2;
-        font-size: 24px;
-        padding: 10px;
-        font-weight: 400;
-    }
-
-    .bar {
-        width: clamp(100px, 65vw, 300px);
-        height: 4px;
-        background: $w;
-        border-radius: 15px;
-    }
-
-    .progress {
-        width: 75%;
-        height: 100%;
-        background: $p2;
-        border-radius: 15px;
-    }
-
-    .progress-html {
-        width: 0%;
-    }
-    .progress-css {
-        width: 0%;
-    }
-    .progress-js {
-        width: 0%;
-    }
-    .progress-py {
-        width: 0%;
-    }
-    .progress-ui {
-        width: 0%;
-    }
-}
-
-
-.box {
-    width: clamp(100px, 75vw, 800px);
-    height: clamp(500px, 75vh, 600px);
-    border-radius: 16px;
-    background: linear-gradient(to bottom, $b,$b2 200% );
-    z-index: 1;
-    position: relative;
-    background-size: cover;
-    
-
-    
-  
-    .rectangle {
-        height: 35%;
-        width: 100%;
-        background:
-		linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
-		linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
-		$dot-color;
-	    background-size: $dot-space $dot-space;
-        position: absolute;
-        top: 0;
-        left: 0;
-        border-top-right-radius: 12px;
-        border-top-left-radius: 12px;
-        z-index: 2;
-        
-    }
-
-    .right {
-        height: 40px;
-        width: 40px;
-        background: $p2;
-        border-radius: 50%;
-        position: absolute;
-        bottom: 2%;
-        top: 50%;
-        transform: translate(0, -50%);
-        color: $w;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 52px;
-        cursor: pointer;
-        animation: move 1s ease-in-out infinite;
-        transition: 450ms ease-in-out;
-        z-index: 4;
-        
-        &:hover {
-            background: $w;
-            color: $p2;
-            
-        }
-
-        
-       
-    }
-
-    .right-2 {
-        display: none;
-    }
-    
-
-    .info {
-        z-index: 2;
-        color: $w;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        height: 450px;
-        
-        .about {
-            line-height: 2.2rem;
-            font-family: 'Ubuntu';
-        }
-
-        .circle {
-            height: 200px;
-            width: 200px;
-            border-radius: 50%;
-            background: url('./Images/Adil.jpg') center center/ cover;
-            background-blend-mode: multiply;
-            box-shadow: -2px 1px 23px 1px rgba(0, 0, 0, 0.75);
-        }
-
-        
-        .social {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            font-size: 34px;
-            color: $p2;
-        }
-
-        a {
-            transition:  350ms ease-in-out;
-        }
-
-        .social > div {
-            background: $w;
-            border-radius: 4px;
-            padding: 6px;
-            margin: 1rem;
-            transition: 250ms ease-in-out;
-            cursor: pointer;
-
-            a {
-                color: $p2;
-            }
-          
-
-            &:hover {
-                background: $p2;
-                transform: scale(1.2);
-            }
-
-            &:hover > a {
-                color: $w;
-                
-            }
-        }
-
-        
-
-      
-    }
-}
-
-  .list {
-        
-      height: 400px;
-      width: 120px;
-      background: rgb(32, 32, 32);
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-      color: $w;
-      border-top-right-radius: 12px;
-      border-bottom-right-radius: 12px;
-      overflow: hidden;
-      display: none !important;
-      animation: fade 700ms ease-in;
-      
-
-    .icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-      li {
-          font-size: 20px;
-          font-family: 'Ubuntu', sans-serif;
-          font-weight: 400;
-          cursor: pointer;
-          padding: 10px 100% 10px 100%;
-          transition: 150ms ease-in-out;
-          list-style: none;
-          &:hover {
-              background: $p2;
-        
-          }
-      }
+    align-items: center;
+    justify-content: space-between;
+  }
+  img {
+    width: 40px;
   }
 
-@keyframes move {
-    0%{
-        right: 2%;
-    }
+  .icon {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+  }
 
-    50%{
-        right: 3%;
-    }
+  h1 {
+    font-family: $font;
+    color: $p2;
+    font-size: 24px;
+    padding: 10px;
+    font-weight: 400;
+  }
 
-    100%{
-        right: 2%;
-    }
+  .bar {
+    width: clamp(100px, 65vw, 300px);
+    height: 4px;
+    background: $w;
+    border-radius: 15px;
+  }
+
+  .progress {
+    width: 75%;
+    height: 100%;
+    background: $p2;
+    border-radius: 15px;
+  }
+
+  .progress-html {
+    width: 0%;
+  }
+  .progress-css {
+    width: 0%;
+  }
+  .progress-js {
+    width: 0%;
+  }
+  .progress-py {
+    width: 0%;
+  }
+  .progress-ui {
+    width: 0%;
+  }
 }
 
-@keyframes change {
-    0%{
-        background-position: 0 50%;
-    }
+.projects-page {
+  display: none;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 85%;
+  margin: auto;
+  height: 80%;
+  justify-content: space-around;
+  font-family: "Ubuntu", sans-serif;
+  a {
+    text-decoration: none;
+    color: $w;
+  }
+  .boxy {
+    height: 200px;
+    width: 200px;
+    background: linear-gradient(-45deg, rgb(92, 0, 128), rgb(90, 0, 173) 100%);
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: $w;
+    border-radius: 12px;
+    border: 2px rgb(37, 37, 37) solid;
+    cursor: pointer;
+    transition: 150ms ease-in-out;
 
-    50%{
-        background-position: 100% 50%;
+    &:hover {
+      background: none;
+      border: 2px purple solid;
+      transform: scale(1.07);
     }
-    
+  }
 
-    100%{
-        background-position: 0 50%;
+  .project-name {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    h1 {
+      font-size: 18px;
+      font-weight: 300;
+      transition: 250ms ease-in-out;
+      opacity: 0;
     }
-    
+  }
+
+  .languages {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    font-size: 6px;
+    height: 10%;
+
+    h2 {
+      font-weight: 200;
+    }
+  }
+
+  .web {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 90%;
+    height: 20%;
+  }
+
+  i {
+    font-size: 22px;
+  }
 }
 
-@keyframes fade {
-    from{
-        opacity: 0;
-        margin: -10px;
+.box {
+  width: clamp(100px, 75vw, 800px);
+  height: clamp(500px, 75vh, 600px);
+  border-radius: 16px;
+  background: linear-gradient(to bottom, $b, $b2 200%);
+  z-index: 1;
+  position: relative;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .rectangle {
+    height: 35%;
+    width: 100%;
+    background: linear-gradient(
+          90deg,
+          $bg-color ($dot-space - $dot-size),
+          transparent 1%
+        )
+        center,
+      linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+      $dot-color;
+    background-size: $dot-space $dot-space;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    z-index: 2;
+  }
+
+  .right {
+    height: 40px;
+    width: 40px;
+    background: $p2;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 2%;
+    top: 50%;
+    transform: translate(0, -50%);
+    color: $w;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 52px;
+    cursor: pointer;
+    animation: move 1s ease-in-out infinite;
+    transition: 450ms ease-in-out;
+    z-index: 4;
+
+    &:hover {
+      background: $w;
+      color: $p2;
+    }
+  }
+
+  .right-2 {
+    display: none;
+  }
+
+  .info {
+    z-index: 2;
+    color: $w;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 450px;
+
+    .about {
+      line-height: 2.2rem;
+      font-family: "Ubuntu";
     }
 
-    to {
-        opacity: 1;
-        margin: 0;
-    }
-}
-
-@keyframes slide{
-    0%{
-        transform: translateX(0px);
-        opacity: '1';
+    .circle {
+      height: 180px;
+      width: 180px;
+      border-radius: 50%;
+      background: url("./Images/Adil.jpg") center center/ cover;
+      background-blend-mode: multiply;
+      box-shadow: -2px 1px 23px 1px rgba(0, 0, 0, 0.75);
     }
 
-    50%{
-        transform: translateX(-10px);
-        opacity: '0';
+    .social {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-size: 34px;
+      color: $p2;
     }
 
-    100%{
-        transform: translateX(0px);
-    }
-}
-.active {
-    display: flex !important;
-    
-}
-
-.rotate {
-    transform: rotate(180deg) !important;
-    
-}
-
-
-
-@media only screen and (max-width: 600px){
-
-    @keyframes moveit {
-        0%{
-            left: 50%;
-        }
-    
-        50%{
-            left: 51%;
-        }
-    
-        100%{
-            left: 50%;
-        }
-    }    
-  
-
-    .list {
-        width: 80px;
-
-        li {
-            font-size: 13.5px;
-            
-        }
+    a {
+      transition: 350ms ease-in-out;
     }
 
     .social > div {
-        padding: 1px !important;
+      background: $w;
+      border-radius: 4px;
+      padding: 6px;
+      margin: 1rem;
+      transition: 250ms ease-in-out;
+      cursor: pointer;
+
+      a {
+        color: $p2;
+      }
+
+      &:hover {
+        background: $p2;
+        transform: scale(1.2);
+      }
+
+      &:hover > a {
+        color: $w;
+      }
     }
+  }
+}
 
-  .right {
+.list {
+  height: 400px;
+  width: 120px;
+  background: rgb(32, 32, 32);
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  color: $w;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  overflow: hidden;
+  display: none !important;
+  animation: fade 700ms ease-in;
 
-     display: none !important;
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  li {
+    font-size: 20px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 10px 100% 10px 100%;
+    transition: 150ms ease-in-out;
+    list-style: none;
+    &:hover {
+      background: $p2;
+    }
+  }
+}
 
+@keyframes move {
+  0% {
+    right: 2%;
   }
 
+  50% {
+    right: 3%;
+  }
 
-.right-2 {
+  100% {
+    right: 2%;
+  }
+}
+
+@keyframes change {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    margin: -10px;
+  }
+
+  to {
+    opacity: 1;
+    margin: 0;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0px);
+    opacity: "1";
+  }
+
+  50% {
+    transform: translateX(-10px);
+    opacity: "0";
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+.active {
+  display: flex !important;
+}
+
+.rotate {
+  transform: rotate(180deg) !important;
+}
+
+@media only screen and (max-width: 950px) {
+  .projects-page {
+    height: 100%;
+    width: 80%;
+    .boxy {
+      width: 160px !important;
+      height: 160px !important;
+    }
+  }
+}
+@media only screen and (max-width: 545px) {
+  .projects-page {
+    width: 100%;
+    height: 100%;
+
+    .boxy {
+      width: 140px !important;
+      height: 140px !important;
+    }
+
+    .project-name {
+      h1 {
+        font-size: 18px;
+        font-weight: 300;
+      }
+    }
+
+    .languages {
+      h2 {
+        font-size: 6px;
+      }
+    }
+
+    .web {
+      i {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  .projects-page {
+    width: 100%;
+    height: 100%;
+
+    .boxy {
+      width: 120px !important;
+      height: 120px !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  @keyframes moveit {
+    0% {
+      left: 50%;
+    }
+
+    50% {
+      left: 51%;
+    }
+
+    100% {
+      left: 50%;
+    }
+  }
+
+  .list {
+    width: 80px;
+
+    li {
+      font-size: 13.5px;
+    }
+  }
+
+  .social > div {
+    padding: 1px !important;
+  }
+
+  .right {
+    display: none !important;
+  }
+
+  .right-2 {
     font-size: 28px;
     color: $p2;
     display: flex !important;
@@ -444,30 +536,34 @@ body {
     width: 30px;
     animation: moveit 1s infinite;
     transition: 250ms ease-in-out;
-}
+  }
   .info .about {
-      margin-top: 20px;
+    margin-top: 20px;
   }
 
   .about h1 {
-      font-size: 24px;
+    font-size: 24px;
   }
 
   .about p {
-      font-size: 16px;
+    font-size: 16px;
   }
 
-  .first-sec, .second-sec {
-      p {
-          font-size: 12px;
-      }
+  .first-sec,
+  .second-sec {
+    p {
+      font-size: 12px;
+    }
   }
 
   .skills-page {
-      h1 {font-size: 14px;
-      }
+    h1 {
+      font-size: 14px;
+    }
   }
 
+  .boxy {
+    width: 150px !important;
+    height: 150px !important;
+  }
 }
-
-
